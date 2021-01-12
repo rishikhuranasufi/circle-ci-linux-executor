@@ -9,6 +9,8 @@ jobs:
       - checkout
       - run: pwd
       - run: ls -la      
+      - run: cd /home/circleci/.ssh/     
+      - run: ls -la
       - run:
            name: Deploy Over SSH
            command: |
