@@ -9,7 +9,7 @@ jobs:
       - checkout
       - run: pwd
       - run: ls -la      
-      - run: cd /home/circleci/.ssh/     
+      - run: cd /home/circleci/.ssh/ && ls -la
       - run: ls -la
       - run:
            name: Deploy Over SSH
