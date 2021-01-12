@@ -13,4 +13,4 @@ jobs:
       - run:
            name: Deploy Over SSH
            command: |
-             ssh -vvv ec2-user@18.218.164.148 "hostname"
+             ssh -vvv -o StrictHostKeyChecking=no ec2-user@18.218.164.148 "hostname"
