@@ -14,8 +14,9 @@ jobs:
       - run:
            name: Deploy Over SSH
            command: |
-             #ssh -vvv ec2-user@18.224.52.247 "hostname"
-             ssh-keyscan -H 18.224.52.247 >> /home/circleci/.ssh/known_hosts
-             sudo cat "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICrMSd0Eh+FLKRfPYUJg7wj1XlHwJpp3BO6WDILVqYVe rishikhurana.sufi@gmail.com" > /home/circleci/.ssh/authorized_keys
-             cat authorized_keys
-             ssh -i /home/circleci/.ssh/id_rsa_a19cc761a6de53b33bd8cba31e937fb1 ec2-user@18.224.52.247 && hostname
+             ssh -vvv ec2-user@18.224.52.247 "hostname"
+             #ssh-keyscan -H 18.224.52.247 >> /home/circleci/.ssh/known_hosts
+             #sudo cat "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICrMSd0Eh+FLKRfPYUJg7wj1XlHwJpp3BO6WDILVqYVe rishikhurana.sufi@gmail.com" > /home/circleci/.ssh/authorized_keys
+             #cat authorized_keys
+             #ssh -i /home/circleci/.ssh/id_rsa_a19cc761a6de53b33bd8cba31e937fb1 ec2-user@18.224.52.247 && hostname
+             
