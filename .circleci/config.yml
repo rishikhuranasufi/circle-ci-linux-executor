@@ -3,7 +3,13 @@ jobs:
   build:
     machine: true
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "27:b1:27:8e:b3:1a:b4:5f:3d:f1:41:a3:f9:97:75:b7"
       - checkout
       - run: pwd
-      - run: ls -la
-      - run: tree
+      - run: ls -la      
+      - run:
+           name: Deploy Over SSH
+           command: |
+             ssh $SSH_USER@$SSH_HOST "hostname"
