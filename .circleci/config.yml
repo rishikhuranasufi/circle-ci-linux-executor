@@ -5,11 +5,11 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "04:af:80:cb:a5:f9:cc:9e:45:62:2b:2d:40:cd:f0:47"
+            - "a1:9c:c7:61:a6:de:53:b3:3b:d8:cb:a3:1e:93:7f:b1"
       - checkout
       - run: pwd
       - run: ls -la      
       - run:
            name: Deploy Over SSH
            command: |
-             ssh -vvv ec2-user@18.218.164.148 "hostname"
+             ssh -vvv ec2-user@18.224.52.247 "hostname"
